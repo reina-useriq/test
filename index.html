@@ -44,24 +44,24 @@
         // that should contain your own variables
 
         // site id is provided by UserIQ
-        var useriqSiteId = "INSERT SITE ID PROVIDED FROM USERIQ HERE"
+        var useriqSiteId = "710119001"
         
         // set site id
         useriq.setSiteId(useriqSiteId)
 
         // userId is required
-        var userId = INSERT USER ID VAR HERE
+        var userId = userId
 
         // accountId is required for account analytics
-        var accountId = INSERT USER ACCOUNT ID VAR HERE
+        var accountId = accountId
 
         // identify user
         useriq.identify(userId, {
-            user_name: INSERT USER NAME VAR HERE,
+            user_name: userName,
             account_id: accountId,
-            account_name: INSERT ACCOUNT NAME VAR HERE,
-            user_email: INSERT USER EMAIL VAR HERE,
-            signup_date: INSERT USER SIGNUP DATE VAR HERE //(YYYY-MM-DD)
+            account_name: accountName,
+            user_email: email,
+            signup_date: date //(YYYY-MM-DD)
         })
 
         // start tracker
@@ -74,18 +74,6 @@
         /**************/
     })();
     
-
-         // identify user
-         useriq.identify(userId, {
-      user_name: YOUR USER NAME VAR HERE,
-      account_id: accountId,
-      account_name: YOUR ACCOUNT NAME VAR HERE,
-      user_email: YOUR USER EMAIL VAR HERE,
-      signup_date: YOUR USER SIGNUP DATE VAR HERE, //(YYYY-MM-DD)
-       
-     // add additional custom variables here like so:
-     user_role: INSERT USER ROLE VAR HERE
-})
     
 </script>
 </body>
