@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>index</title>
+</head>
+
+<body>
+  <h1>INDEX</h1>
+  <p>This is a paragraph.</p>
+  <A HREF="about.html">About this site</A>
+  <br>
+  <A HREF="team.html">Teams on this site</A>
+
+  <script type="text/javascript">
+    (function(){
+        /**************/
+        // UserIQ helper logic
+        var useriq = (window._uiq = window._uiq || [])
+        useriq.invoked &&
+          window.console &&
+          console.error &&
+          console.error('Useriq snippet already exists.'),
+          (useriq.invoked = !0),
+          (useriq.methods = [
+            'setSiteId',
+            'startTracker',
+            'setDoNotTrack',
+            'identify',
+            'track',
+            'group'
+          ]),
+          (useriq.factory = function(e) {
+            return function() {
+              var r = Array.prototype.slice.call(arguments)
+              return r.unshift(e), useriq.push(r), useriq
+            }
+          })
+        for (var i = 0; i < useriq.methods.length; i++) {
+          var key = useriq.methods[i]
+          useriq[key] = useriq.factory(key)
+        }
+        /**************/
+
+        // All red highlights indicate the areas in the UserIQ script 
+        // that should contain your own variables
+
+        // site id is provided by UserIQ
+        var useriqSiteId = "INSERT SITE ID PROVIDED FROM USERIQ HERE"
+        
+        // set site id
+        useriq.setSiteId(useriqSiteId)
+
+        // userId is required
+        var userId = INSERT USER ID VAR HERE
+
+        // accountId is required for account analytics
+        var accountId = INSERT USER ACCOUNT ID VAR HERE
+
+        // identify user
+        useriq.identify(userId, {
+            user_name: INSERT USER NAME VAR HERE,
+            account_id: accountId,
+            account_name: INSERT ACCOUNT NAME VAR HERE,
+            user_email: INSERT USER EMAIL VAR HERE,
+            signup_date: INSERT USER SIGNUP DATE VAR HERE //(YYYY-MM-DD)
+        })
+
+        // start tracker
+        useriq.startTracker()
+
+        /**************/
+        // UserIQ helper logic
+        var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+        g.defer=true; g.async=true; g.src="https://feed.useriq.com/useriq.js"; s.parentNode.insertBefore(g,s);
+        /**************/
+    })();
+    
+
+         // identify user
+         useriq.identify(userId, {
+      user_name: YOUR USER NAME VAR HERE,
+      account_id: accountId,
+      account_name: YOUR ACCOUNT NAME VAR HERE,
+      user_email: YOUR USER EMAIL VAR HERE,
+      signup_date: YOUR USER SIGNUP DATE VAR HERE, //(YYYY-MM-DD)
+       
+     // add additional custom variables here like so:
+     user_role: INSERT USER ROLE VAR HERE
+})
+    
+</script>
+</body>
+
+</html>
